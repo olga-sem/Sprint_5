@@ -10,6 +10,7 @@ class TestLogOut:
         driver.find_element(*TestLocators.PASSWORD_FIELD_IN_AUTH_FORM).send_keys('567892')
         driver.find_element(*TestLocators.SIGN_IN_BUTTON_IN_AUTH_FORM).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(TestLocators.ORDER_BUTTON))
+        WebDriverWait(driver, 5).until(EC.element_to_be_clickable(TestLocators.PERSONAL_ACCOUNT_BUTTON))
         driver.find_element(*TestLocators.PERSONAL_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.PROFILE_LINK))
         driver.find_element(*TestLocators.EXIT_BUTTON)

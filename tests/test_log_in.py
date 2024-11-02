@@ -25,7 +25,7 @@ class TestSignIn:
     def test_sign_in_with_log_in_button_in_auth_form(self, driver):
         driver.find_element(*TestLocators.SIGN_IN_BUTTON).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SIGN_IN_FORM))
-        driver.find_element(*TestLocators.SIGN_UP_BUTTON).click()
+        driver.find_element(*TestLocators.SIGN_UP_LINK).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SIGN_UP_FORM))
         driver.find_element(*TestLocators.SIGN_IN_LINK).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SIGN_IN_FORM))
@@ -39,7 +39,7 @@ class TestSignIn:
         driver.find_element(*TestLocators.SIGN_IN_BUTTON).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(TestLocators.SIGN_IN_FORM))
         driver.find_element(*TestLocators.RESET_PASSWORD_LINK).click()
-        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.RESET_PASSWORD_LINE))
+        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SIGN_IN_LINK))
         driver.find_element(*TestLocators.SIGN_IN_LINK).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SIGN_IN_FORM))
         driver.find_element(*TestLocators.EMAIL_FIELD_IN_AUTH_FORM).send_keys('olga_semenova_12_666@gmail.com')

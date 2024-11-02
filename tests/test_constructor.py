@@ -41,8 +41,8 @@ class TestConstructor:
         driver.find_element(*TestLocators.CONSTRUCTOR_BUTTON).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.CONSTRUCT_A_BURGER_LINE))
         driver.find_element(*TestLocators.SAUCES_BUTTON).click()
-        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SAUCES_LINE))
-        assert driver.find_element(*TestLocators.SAUCES_LINE)
+        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SAUCES_CHOSEN_BUTTON))
+        assert driver.find_element(*TestLocators.SAUCES_CHOSEN_BUTTON)
 
     def test_open_buns_section(self, driver):
         driver.find_element(*TestLocators.PERSONAL_ACCOUNT_BUTTON).click()
@@ -57,10 +57,10 @@ class TestConstructor:
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.CONSTRUCT_A_BURGER_LINE))
         driver.find_element(*TestLocators.SAUCES_BUTTON).click()
         driver.find_element(*TestLocators.BUNS_BUTTON).click()
-        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.BUNS_LINE))
-        assert driver.find_element(*TestLocators.BUNS_LINE)
+        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.BUNS_CHOSEN_BUTTON))
+        assert driver.find_element(*TestLocators.BUNS_CHOSEN_BUTTON)
 
-    def test_open_sauces_section(self, driver):
+    def test_open_fillings_section(self, driver):
         driver.find_element(*TestLocators.PERSONAL_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.SIGN_IN_FORM))
         driver.find_element(*TestLocators.EMAIL_FIELD_IN_AUTH_FORM).send_keys('olga_semenova_12_666@gmail.com')
@@ -72,8 +72,8 @@ class TestConstructor:
         driver.find_element(*TestLocators.CONSTRUCTOR_BUTTON).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.CONSTRUCT_A_BURGER_LINE))
         driver.find_element(*TestLocators.FILLINGS_BUTTON).click()
-        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.FILLINGS_LINE))
-        assert driver.find_element(*TestLocators.FILLINGS_LINE)
+        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.FILLINGS_CHOSEN_BUTTON))
+        assert driver.find_element(*TestLocators.FILLINGS_CHOSEN_BUTTON)
 
 
 
