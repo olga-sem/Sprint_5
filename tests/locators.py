@@ -26,10 +26,10 @@ class TestLocators:
     CONSTRUCT_A_BURGER_LINE = [By.XPATH, './/h1[text()="Соберите бургер"]'] #Заголовок Соберите бургер
     STELLAR_BURGERS_LOGO = [By.XPATH, './/div[contains(@class, "AppHeader_header__logo")]'] # Логотип Stellar Burgers
     SAUCES_BUTTON = [By.XPATH, './/span[text()="Соусы"]'] # Кнопка Соусы
-    SAUCES_CHOSEN_BUTTON = [By.XPATH, './/div[contains(@class, "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect")]'] # Кнопка Соусы после таба
+    SAUCES_CHOSEN_BUTTON = [By.XPATH, './/div[@class="tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"]/span[text()="Соусы"]'] # Кнопка Соусы после таба
     BUNS_BUTTON = [By.XPATH, './/span[text()="Булки"]'] #Кнопка Булки
-    BUNS_CHOSEN_BUTTON = [By.XPATH, './/div[contains(@class, "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect")]'] #Кнопка Булки после таба
+    BUNS_CHOSEN_BUTTON = [By.XPATH, './/div[@class="tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"]/span[text()="Булки"]'] #Кнопка Булки после таба
     FILLINGS_BUTTON = [By.XPATH, './/span[text()="Начинки"]'] #Кнопка Начинки
-    FILLINGS_CHOSEN_BUTTON = [By.XPATH, './/div[contains(@class, "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect")] '] #Кнопка Начинки после таба
+    FILLINGS_CHOSEN_BUTTON = [By.XPATH, './/div[@class="tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"]/span[text()="Начинки"]'] #Кнопка Начинки после таба
 
     EXIT_BUTTON = [By.XPATH, './/button[text()="Выход"]'] #Кнопка Выход
